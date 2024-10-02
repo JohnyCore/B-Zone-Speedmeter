@@ -101,7 +101,7 @@ function handleSpeedTextdraw2(scalingFactor)
 end
 
 function getTextdrawIdByText(targetText)
-    for i = 0, 4000 do
+    for i = 2000, 2150 do
         local text = sampTextdrawGetString(i)
         if text and text == targetText then
             return i
