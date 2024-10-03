@@ -1,5 +1,5 @@
 local script_name = "Speedmeter for B-Zone"
-local script_version = "1.0.0"
+local script_version = "1.0.1"
 local script_author = "DjC"
 
 local samp = require "samp.events"
@@ -13,9 +13,6 @@ local unitTextdrawId2 = nil
 function main()
     if not isSampfuncsLoaded() or not isSampLoaded() then return end
     while not isSampAvailable() do wait(0) end
-
-    sampRegisterChatCommand("findtextdraw", displayTextdrawId) 
-    sampRegisterChatCommand("findspeedtd", findSpeedTextdrawIds) 
 
     local scalingFactor = 1
 
@@ -108,23 +105,4 @@ function getTextdrawIdByText(targetText)
         end
     end
     return nil
-end
-
-function displayTextdrawId(targetText)
-    local textId = getTextdrawIdByText(targetText)
-    if textId then
-        -- sampAddChatMessage("Textdraw ID found: " .. textId .. " | Text: " .. targetText, -1)
-    else
-        -- sampAddChatMessage("Textdraw not found for text: " .. targetText, -1)
-    end
-end
-
-function findSpeedTextdrawIds()
-    local speedTextId = getTextdrawIdByText("0")
-    local unitTextId = getTextdrawIdByText("KM/H")
-    if speedTextId and unitTextId then
-        -- sampAddChatMessage("Textdraw ID speed: " .. speedTextId .. " | Textdraw ID KM/H: " .. unitTextId, -1)
-    else
-        -- sampAddChatMessage("Textdraw '0' or 'KM/H' not found.", -1)
-    end
 end
