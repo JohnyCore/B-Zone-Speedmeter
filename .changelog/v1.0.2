@@ -1,0 +1,16 @@
+Speedmeter for B-Zone v1.0.2
+Author: DjC
+Release Date: October 4, 2024
+
+Fixed an issue where textdraws displaying the number '0' (e.g., for PINs or other server-related displays) would incorrectly change to the car speed when using the speedometer. This has been resolved by ensuring the script checks for both the speed value ('0') and the associated "KM/H" unit textdraw.
+Removed a faulty API call (sampTextdrawIsDisplayed), preventing script crashes due to an invalid function.
+
+Improved Compatibility:
+The speedometer will now only update when both the speed and unit textdraws are present and valid, ensuring that other textdraws with the same '0' value are unaffected.
+
+Performance Enhancements:
+Optimized textdraw management by checking the presence of both the speed and unit textdraws before updating them.
+Enhanced stability in handling multiple textdraws simultaneously without overwriting or interfering with other in-game displays.
+
+Known Issues:
+None at the moment, but feedback is welcome!
