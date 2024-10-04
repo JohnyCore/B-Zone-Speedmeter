@@ -49,7 +49,8 @@ function handleSpeedTextdraw2(scalingFactor)
             speedTextdraws.unitTextdrawId2.id = getTextdrawIdByText(speedTextdraws.unitTextdrawId2.text)
         end
 
-        if speedTextdraws.speedTextdrawId2.id then
+        -- Check if both textdraws are found (IDs are valid)
+        if speedTextdraws.speedTextdrawId2.id and speedTextdraws.unitTextdrawId2.id then
             local car = storeCarCharIsInNoSave(playerPed)
             local speed = getCarSpeed(car) * 3.6 * scalingFactor
             local formattedSpeed = string.format(speedTextdraws.speedTextdrawId2.formatString, speed)
