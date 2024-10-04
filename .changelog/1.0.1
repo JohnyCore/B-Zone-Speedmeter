@@ -1,0 +1,14 @@
+Speedmeter for B-Zone v1.0.1
+Author: DjC
+Release Date: October 2, 2024
+
+Optimized Textdraw ID Search Range:
+
+Before: The script previously searched for textdraw IDs within the full range from 0 to 4000. This led to unnecessary processing and longer execution times, especially if the target textdraw was within a smaller subset of IDs.
+Now: The search range has been narrowed to 2000 to 2150, which is more specific to the use case, resulting in faster search times and reduced processing overhead.
+ 
+
+Why is this an optimization?
+
+Searching a smaller range of textdraw IDs reduces the amount of unnecessary checks in the loop, leading to better performance.
+In environments where textdraws are limited to specific ID ranges, narrowing the range makes the search more efficient, and make sure that the script only focuses on relevant IDs.
