@@ -36,3 +36,6 @@ This script hooks into your existing SA:MP server's textdraws and replaces the s
 2. Place the Lua script file into the `moonloader` folder within your GTA SA directory.
 3. Place the `.lua` file in your MoonLoader `scripts` folder.
 4. Start your SA:MP server and enjoy the real-time speedometer!
+
+## Notes
+- This mod is tailored specifically for **RPG.B-ZONE.RO** and may not function as intended on other servers.
